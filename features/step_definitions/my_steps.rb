@@ -3,9 +3,9 @@ Given("que iniciamos el juego") do
     visit '/'
   end
   
-  When("adivine con {string}") do |string|
-    fill_in("clave", :with => string)
-    click_button("validar")
+  When("adivina con {string}") do |string|
+    fill_in("letraIngresada", :with => string)
+    click_button("enviar")
   end
   
   Then("debe mostrarme {string}") do |resultado|
