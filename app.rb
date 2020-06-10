@@ -6,5 +6,9 @@ get '/' do
 end
 
 post '/' do
-    "Letra correcta"
+    if params['letraIngresada'] == 'a'
+        "Letra correcta"
+    else
+        "Letra incorrecta"
+    end
 end
