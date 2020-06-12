@@ -1,10 +1,15 @@
 class VerificarCaracter 
     def validar caracter
         if caracter.length == 1
+            actualizoCaracter = false
             @secreto.split('').each_with_index do |char,index|
                 if (char == caracter)
                     @rayitas[index*2] = char
+                    actualizoCaracter = true
                 end
+            end
+            if actualizoCaracter == false
+                @intentos = @intentos - 1
             end
         else
             @rayitas ="Debes ingresar una letra"
@@ -21,7 +26,9 @@ class VerificarCaracter
         @rayitas += (" _" * (palabra.size-1))
     end
 
-    def definirIntentos cantidad
-        cantidad
+    def initialize
+        @intentos = 3
     end
+
+    attr_reader :intentos
 end
