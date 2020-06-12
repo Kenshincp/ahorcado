@@ -2,7 +2,7 @@ class VerificarCaracter
     def validar caracter
         if caracter.length == 1
             if caracter == "a"
-                "Letra correcta"
+                "_ _ _ _ a _ _"
             else
                 "Letra incorrecta"
             end

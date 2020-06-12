@@ -1,13 +1,14 @@
 require './lib/VerificarCaracter.rb'
 
 describe VerificarCaracter do
-    it "Cuando recibimos a retornamos correcto " do
+    it "Cuando recibimos a retornamos _ _ _ _ a _ _" do
         #Arrange
         verificar = VerificarCaracter.new
+        verificar.guardarSecreto("pescado")
         #act
         result = verificar.validar("a")
         #assert
-        expect(result).to eq "Letra correcta"
+        expect(result).to eq "_ _ _ _ a _ _"
     end
 
     it "Cuando recibimos b retornamos Incorrecto " do
