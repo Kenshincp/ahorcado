@@ -13,3 +13,8 @@ Scenario: adivina una letra incorrecta
     Given que iniciamos el juego
     When adivina con "b"
     Then debe mostrarme "Letra incorrecta"
+
+Scenario: enviar mas de una letra
+    Given que iniciamos el juego
+    When adivina con "ba"
+    Then debe mostrarme "Debes ingresar una letra"
