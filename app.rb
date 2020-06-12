@@ -9,5 +9,6 @@ get '/' do
 end
 
 post '/' do
-    session['verificador'].validar(params['letraIngresada'])     
+    @rayitas = session['verificador'].validar(params['letraIngresada'])
+    erb :juego   
 end
