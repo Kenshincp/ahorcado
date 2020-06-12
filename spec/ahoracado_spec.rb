@@ -49,9 +49,16 @@ describe VerificarCaracter do
         expect(resultado).to eq "p _ _ _ a _ _"
     end 
 
-    it "Enviamos 3 intentos nos devuelve 3" do
+    it "Enviamos # intentos nos devuelve 3" do
         verificar = VerificarCaracter.new
-        resultado = verificar.definirIntentos(3)
-        expect(resultado).to eq 3
+        expect(verificar.intentos).to eq 3
+    end
+
+    it "Enviamos un caracter no existente y nos devuelve 2" do
+        verificar = VerificarCaracter.new
+        verificar.guardarSecreto("pescado")
+        verificar.validar("j")
+        resultado = verificar.intentos
+        expect(resultado).to eq 2
     end
 end
