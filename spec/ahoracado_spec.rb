@@ -24,6 +24,7 @@ describe VerificarCaracter do
     it "Cuando recibimos b retornamos Incorrecto " do
         #Arrange
         verificar = VerificarCaracter.new
+        verificar.guardarSecreto("pescado")
         #act
         result = verificar.validar("b")
         #assert
