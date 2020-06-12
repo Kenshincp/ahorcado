@@ -10,12 +10,14 @@ describe VerificarCaracter do
         expect(result).to eq "Correcto!"
     end
     it "si la palabra secreta es pescado debe devolver '_ _ _ _ _ _ _'" do
-       #Arrange
        verificar = VerificarCaracter.new
-       
        resultado = verificar.guardarSecreto("pescado")
-
        expect(resultado).to eq "_ _ _ _ _ _ _"
-
     end
+
+    it "si la palabra secreta es murcielago debe devolver '_ _ _ _ _ _ _ _ _ _'" do
+        verificar = VerificarCaracter.new
+        resultado = verificar.guardarSecreto("murcielago")
+        expect(resultado).to eq "_ _ _ _ _ _ _ _ _ _"
+     end
 end
