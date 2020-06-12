@@ -3,11 +3,11 @@ require './config'
 require './lib/VerificarCaracter'
 
 get '/' do
-    @rayitas = "_ _ _ _ _ _ _"
+    session['verificador'] = VerificarCaracter.new
+    @rayitas = session['verificador'].guardarSecreto('pescado')
     erb :juego
 end
 
 post '/' do
-    verificar = VerificarCaracter.new
-    verificar.validar(params['letraIngresada'])     
+    session['verificador'].validar(params['letraIngresada'])     
 end

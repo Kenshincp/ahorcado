@@ -28,7 +28,7 @@ describe VerificarCaracter do
         #act
         result = verificar.validar("b")
         #assert
-        expect(result).to eq "Letra incorrecta"
+        expect(result).to eq "_ _ _ _ _ _ _"
     end
     it "si la palabra secreta es pescado debe devolver '_ _ _ _ _ _ _'" do
        verificar = VerificarCaracter.new

@@ -1,9 +1,8 @@
 class VerificarCaracter 
     def validar caracter
         if caracter.length == 1
-            old_rayitas = @rayitas
             @rayitas = ""
-            @secreto.split('').each_with_index do |char, index |
+            @secreto.split('').each do |char |
                 if (char == caracter)
                     @rayitas += "#{char} "
                 else
@@ -12,9 +11,6 @@ class VerificarCaracter
             end
             @rayitas.chomp!(" ")
 
-            if(old_rayitas == @rayitas)
-                @rayitas ="Letra incorrecta"
-            end
         else
             @rayitas ="Debes ingresar una letra"
         end
