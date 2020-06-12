@@ -7,7 +7,16 @@ describe VerificarCaracter do
         #act
         result = verificar.validar("a")
         #assert
-        expect(result).to eq "Correcto!"
+        expect(result).to eq "Letra correcta"
+    end
+
+    it "Cuando recibimos b retornamos Incorrecto " do
+        #Arrange
+        verificar = VerificarCaracter.new
+        #act
+        result = verificar.validar("b")
+        #assert
+        expect(result).to eq "Letra incorrecta"
     end
     it "si la palabra secreta es pescado debe devolver '_ _ _ _ _ _ _'" do
        verificar = VerificarCaracter.new
