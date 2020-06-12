@@ -41,4 +41,11 @@ describe VerificarCaracter do
         resultado = verificar.guardarSecreto("murcielago")
         expect(resultado).to eq "_ _ _ _ _ _ _ _ _ _"
      end
+    it "si agrego una p ejecuto y luego una a debe devolver 'p _ _ _ a _ _'" do
+        verificar = VerificarCaracter.new
+        verificar.guardarSecreto("pescado")
+        resultado = verificar.validar("p")
+        resultado = verificar.validar("a")
+        expect(resultado).to eq "p _ _ _ a _ _"
+    end 
 end
