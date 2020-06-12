@@ -48,4 +48,10 @@ describe VerificarCaracter do
         resultado = verificar.validar("a")
         expect(resultado).to eq "p _ _ _ a _ _"
     end 
+
+    it "Enviamos 3 intentos nos devuelve 3" do
+        verificar = VerificarCaracter.new
+        resultado = verificar.definirIntentos(3)
+        expect(resultado).to eq 3
+    end
 end
