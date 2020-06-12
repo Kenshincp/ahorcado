@@ -1,9 +1,9 @@
 class VerificarCaracter 
     def validar caracter
         if caracter == "a"
-            "Correcto!"
+            "Letra correcta"
         else
-            "Incorrecto!"
+            "Letra incorrecta"
         end
     end
 end
