@@ -25,3 +25,7 @@ Scenario: adivina tres letras
     And adivina con "p"
     And adivina con "e"
     Then debe mostrarme "p e _ _ a _ _"
+
+    Scenario: ver número de intentos
+    Given que iniciamos el juego
+    Then debe mostrarme "3 intentos"
