@@ -6,4 +6,7 @@ class VerificarCaracter
             "Letra incorrecta"
         end
     end
+    def guardarSecreto palabra
+        "_ _ _ _ _ _ _"
+    end
 end
