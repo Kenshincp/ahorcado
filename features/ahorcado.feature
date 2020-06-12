@@ -1,5 +1,9 @@
 Feature: Adivina las letras
 
+Scenario: ver las rayitas
+    Given que iniciamos el juego
+    Then debe mostrarme "_ _ _ _ _ _ _"
+
 Scenario: adivina una letra
     Given que iniciamos el juego
     When adivina con "a"
