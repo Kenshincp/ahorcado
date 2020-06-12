@@ -7,6 +7,7 @@ class VerificarCaracter
         end
     end
     def guardarSecreto palabra
-        "_ _ _ _ _ _ _"
+        rayitas = "_"
+        rayitas += (" _" * (palabra.size-1))
     end
 end
