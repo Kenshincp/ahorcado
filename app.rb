@@ -9,6 +9,5 @@ end
 
 post '/' do
     verificar = VerificarCaracter.new
-    verificar.validar(params['letraIngresada'])
-        
+    verificar.validar(params['letraIngresada'])     
 end
