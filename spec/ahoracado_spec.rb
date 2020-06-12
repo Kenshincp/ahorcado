@@ -48,7 +48,6 @@ describe VerificarCaracter do
         resultado = verificar.validar("a")
         expect(resultado).to eq "p _ _ _ a _ _"
     end 
-<<<<<<< HEAD
     it "si completo todas las letras debe devolver 'p e s c a d o -- GANASTE!'" do
         verificar = VerificarCaracter.new
         verificar.guardarSecreto("pescado")
@@ -60,12 +59,11 @@ describe VerificarCaracter do
         resultado = verificar.validar("d")
         resultado = verificar.validar("o")
         expect(resultado).to eq 'p e s c a d o -- GANASTE!'
-=======
+    end
 
     it "Enviamos 3 intentos nos devuelve 3" do
         verificar = VerificarCaracter.new
         resultado = verificar.definirIntentos(3)
         expect(resultado).to eq 3
->>>>>>> bd4a29e3f2f7aef88b060df4b364918e853727f4
     end
 end
