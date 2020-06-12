@@ -14,6 +14,10 @@ class VerificarCaracter
         else
             @rayitas ="Debes ingresar una letra"
         end
+
+        unless @rayitas.include?("_")
+            @rayitas += " -- GANASTE!"
+        end 
         return @rayitas
     end
     def guardarSecreto palabra
