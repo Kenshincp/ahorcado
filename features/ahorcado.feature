@@ -18,3 +18,10 @@ Scenario: enviar mas de una letra
     Given que iniciamos el juego
     When adivina con "ba"
     Then debe mostrarme "Debes ingresar una letra"
+
+Scenario: adivina tres letras
+    Given que iniciamos el juego
+    When adivina con "a"
+    And adivina con "p"
+    And adivina con "e"
+    Then debe mostrarme "p e _ _ a _ _"
