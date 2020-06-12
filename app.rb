@@ -1,5 +1,6 @@
 require 'sinatra'
 require './config'
+require './lib/VerificarCaracter'
 
 get '/' do
     @rayitas = "_ _ _ _ _ _ _"
@@ -7,10 +8,7 @@ get '/' do
 end
 
 post '/' do
-
-    if params['letraIngresada'] == 'a'
-        "Letra correcta"
-    else
-        "Letra incorrecta"
-    end
+    verificar = VerificarCaracter.new
+    verificar.validar(params['letraIngresada'])
+        
 end
