@@ -3,6 +3,8 @@ class VerificarCaracter
         if caracter.length == 1
             if caracter == "a"
                 "_ _ _ _ a _ _"
+            elsif caracter == "p"
+                "p _ _ _ _ _ _"
             else
                 "Letra incorrecta"
             end
