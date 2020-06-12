@@ -16,4 +16,8 @@ class VerificarCaracter
         @rayitas = "_"
         @rayitas += (" _" * (palabra.size-1))
     end
+
+    def definirIntentos cantidad
+        cantidad
+    end
 end
