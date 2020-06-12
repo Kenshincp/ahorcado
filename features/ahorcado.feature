@@ -7,12 +7,12 @@ Scenario: ver las rayitas
 Scenario: adivina una letra
     Given que iniciamos el juego
     When adivina con "a"
-    Then debe mostrarme "Letra correcta"
+    Then debe mostrarme "_ _ _ _ a _ _"
 
 Scenario: adivina una letra incorrecta
     Given que iniciamos el juego
     When adivina con "b"
-    Then debe mostrarme "Letra incorrecta"
+    Then debe mostrarme "_ _ _ _ _ _ _"
 
 Scenario: enviar mas de una letra
     Given que iniciamos el juego
